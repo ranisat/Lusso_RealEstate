@@ -1,0 +1,47 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* //Import tailwind css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  font-family: "Inter", sans-serif;
+}
+.section-title{
+  font-family: "Archivo Black", sans-serif;
+}
+p{
+  font-family: "Inter", sans-serif;
+  letter-spacing:-0.3px;
+}
+@layer base {
+  html{
+   
+  }
+  body{
+    @apply m-0 p-0
+  }
+}
+@layer utilities {
+  /* START of Typography */
+  .container {
+    @apply mx-auto max-w-screen-xl px-16 max-xl:px-10 max-lg:px-6 max-sm:px-4;
+  }
+  .nav-li{
+    @apply text-[16px] font-[500] capitalize max-lg:flex-col  max-lg:pt-5
+  }
+  .nav-logo{
+    @apply text-2xl font-black relative before:absolute before:content-[''] before:w-4 before:h-1 before:bg-red-500
+    before:right-0 before:top-1.5
+  }
+  .sidebar_before {
+    @apply max-lg:before:content-[''] max-lg:before:absolute max-lg:before:left-0 max-lg:before:top-0 max-lg:before:h-[440px] max-lg:before:w-[100%] max-lg:before:bg-[#00486f] max-lg:before:opacity-100;
+  }
+  .hero-bg{
+    @apply  before:content-[''] before:absolute before:left-0 before:top-0 before:right-0 before:bg-gradient-to-r before:to-[#03500a] before:via-black/20 before:from-[#01181d]  before:w-[100%] before:h-full  before:opacity-60
+  }
+ 
+}
